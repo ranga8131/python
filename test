@@ -1,0 +1,26 @@
+# Validate User input: 
+
+#   1) User input must not be more than 12
+name = input("Enter your name: ")
+length = len(name)
+is_space = name.find(" ")
+is_alpha = name.isalpha()
+
+if length > 12 and is_space != -1 and not is_alpha:
+    print("Username is invalid")
+    print("username should not exceed 12")
+    print("Username must not contain spaces") 
+    print("Username must not contain digits")
+
+elif length > 12 or is_space != -1 or not is_alpha:
+    if length > 12:
+        print("username should not exceed 12")
+    elif is_space != -1:    
+        print("Username must not contain spaces") 
+    elif not is_alpha:
+        print("Username must not contain digits")
+
+else:
+    print("Congratzzz! Your username is VALID")   
+
+
